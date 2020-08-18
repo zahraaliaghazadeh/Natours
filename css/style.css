@@ -52,9 +52,19 @@ body{
  height: 35px;
 }
 
+/* .logo:hover{
+    animation: moveInRight 3s ease-out;
+} */
+
 .heading-primary{
 color: #fff;
 text-transform: uppercase;
+/* determines if backface is hidden or visible to user */
+/* this is to fix the shaky animation heading */
+backface-visibility: hidden;
+
+margin-bottom: 60px;
+
 }
 
 .heading-primary-main{
@@ -62,12 +72,26 @@ display: block;
 font-size: 60px;
 font-weight: 400;
 letter-spacing: 35px;
+
+animation-name: moveInLeft;
+animation-duration: 1s;
+/* look at MDN for other timing functions */
+/* slow and fast */
+animation-timing-function: ease-out;
+
+/* animation-delay: 3s; */
+/* animation-iteration-count: 3; */
+
 }
 .heading-primary-sub{
 display: block;
 font-size: 20px;
 font-weight: 400;
 letter-spacing: 17.4px;
+animation-name: moveInRight;
+animation-duration: 1s;
+animation-timing-function: ease-out;
+
 }
 
 .text-box{
@@ -78,5 +102,70 @@ letter-spacing: 17.4px;
     /* background-color: red; */
 
     /* in relation to the element itself */
-    transform: translate(-50%,-50%)
+    transform: translate(-50%,-50%);
+    text-align:center;
+}
+
+/* opacity and transform can be used for animation */
+@keyframes moveInLeft{
+    0% {
+    opacity : 0;
+    /* to animate in the x direction */
+    /* - means goes to the left */
+    transform: translateX(-100px)
+    }
+    80%{
+        transform: translateX(10px)
+
+    }
+    100%{
+    opacity: 1;
+    /* looks like right now; the final state */
+    transform: translate(0)
+    }
+}
+
+
+@keyframes moveInRight{
+    0% {
+    opacity : 0;
+    /* to animate in the x direction */
+    /* - means goes to the left */
+    /* can add this too ,rotate(-180deg) */
+    transform: translateX(100px)
+    }
+  
+    80%{
+        transform: translateX(-10px)
+
+    }
+    100%{
+    opacity: 1;
+    /* looks like right now; the final state */
+    transform: translate(0)
+    }
+}
+
+/* link is a pseudoclass, link is a state of btn */
+/* for anchor element or a tag */
+/* .btn:visited is another state */
+.btn:link, .btn:visited{
+text-transform: uppercase;
+text-decoration: none;
+padding: 15px 40px ;
+display: inline-block;
+border-radius: 100px;
+transition
+}
+
+.btn-white{
+    background-color: #fff ;
+    color: #777 ;
+}
+
+.btn:hover{
+    transform: translate(-3px)
+}
+.btn:active{
+    transform: translate(-1px)
 }
