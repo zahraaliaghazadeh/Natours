@@ -6,230 +6,188 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
-
 /* universal reset */
-*{
-    /* will reset browser default margins */
-    margin : 0;
-    padding: 0;
-    /* borders and paddings are not added to the height */
-    box-sizing: border-box;
-}
+*,
+*::after,
+*::before {
+  /* will reset browser default margins */
+  margin: 0;
+  padding: 0;
+  /* borders and paddings are not added to the height */
+  box-sizing: border-box; }
 
-body{
-    font-family : "Lato" , sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.7;
-    color: #777;
-    padding : 30px;
-}
-.header{
-    height: 95vh;
-    background-image: linear-gradient(to right bottom,
-     #7ed56faf ,
-      #28b4858f), url(../img/hero.jpg);
-    /* it will fit the element inside of the box */
-    background-size: cover;
-    /* could also use center */
-    background-position: top;
-    /* to cut part of the picture */
-    /* x y , x y, x y */
-    /* clip-path: polygon(0 0 , 100% 0 , 100% 200px , 0 100% ) */
-    clip-path: polygon(0 0 , 100% 0 , 100% 75vh , 0 100% );
-    /* bennettfeely.com/clippy/ resource for polygon*/ 
+/* to convert px to rem, 10 would be easy */
+html {
+  /* font-size:10px; */
+  /* rems are not supported on internet explorer below 9 */
+  /* 10 / 16 = 0.625 */
+  font-size: 62.5%; }
 
-    position: relative;
-}
+body {
+  font-family: "Lato" , sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
 
-.logo-box{
- position: absolute;
- top: 40px;
- left: 40px;
-}
-
-.logo{
- height: 35px;
-}
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  /* it will fit the element inside of the box */
+  background-size: cover;
+  /* could also use center */
+  background-position: top;
+  /* to cut part of the picture */
+  /* x y , x y, x y */
+  /* clip-path: polygon(0 0 , 100% 0 , 100% 200px , 0 100% ) */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /* bennettfeely.com/clippy/ resource for polygon*/
+  position: relative; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    text-align: center; }
 
 /* .logo:hover{
     animation: moveInRight 3s ease-out;
 } */
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  /* determines if backface is hidden or visible to user */
+  /* this is to fix the shaky animation heading */
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    /* look at MDN for other timing functions */
+    /* slow and fast */
+    animation-timing-function: ease-out;
+    /* animation-delay: 3s; */
+    /* animation-iteration-count: 3; */ }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.75rem;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
 
-.heading-primary{
-color: #fff;
-text-transform: uppercase;
-/* determines if backface is hidden or visible to user */
-/* this is to fix the shaky animation heading */
-backface-visibility: hidden;
-
-margin-bottom: 60px;
-
-}
-
-.heading-primary-main{
-display: block;
-font-size: 60px;
-font-weight: 400;
-letter-spacing: 35px;
-
-animation-name: moveInLeft;
-animation-duration: 1s;
-/* look at MDN for other timing functions */
-/* slow and fast */
-animation-timing-function: ease-out;
-
-/* animation-delay: 3s; */
-/* animation-iteration-count: 3; */
-
-}
-.heading-primary-sub{
-display: block;
-font-size: 20px;
-font-weight: 400;
-letter-spacing: 17.4px;
-animation-name: moveInRight;
-animation-duration: 1s;
-animation-timing-function: ease-out;
-
-}
-
-.text-box{
-    position: absolute;
-    /* in relation to parent element */
-    top: 40%;
-    left: 50%;
-    /* background-color: red; */
-
-    /* in relation to the element itself */
-    transform: translate(-50%,-50%);
-    text-align:center;
-}
+.header__text-box {
+  position: absolute;
+  /* in relation to parent element */
+  top: 40%;
+  left: 50%;
+  /* background-color: red; */
+  /* in relation to the element itself */
+  transform: translate(-50%, -50%);
+  text-align: center; }
 
 /* opacity and transform can be used for animation */
-@keyframes moveInLeft{
-    0% {
-    opacity : 0;
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
     /* to animate in the x direction */
     /* - means goes to the left */
-    transform: translateX(-100px)
-    }
-    80%{
-        transform: translateX(10px)
-
-    }
-    100%{
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
     opacity: 1;
     /* looks like right now; the final state */
-    transform: translate(0)
-    }
-}
+    transform: translate(0); } }
 
-
-@keyframes moveInRight{
-    0% {
-    opacity : 0;
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
     /* to animate in the x direction */
     /* - means goes to the left */
     /* can add this too ,rotate(-180deg) */
-    transform: translateX(100px)
-    }
-  
-    80%{
-        transform: translateX(-10px)
-
-    }
-    100%{
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
     opacity: 1;
     /* looks like right now; the final state */
-    transform: translate(0)
-    }
-}
+    transform: translate(0); } }
 
-/* link is a pseudoclass, link is a state of btn */
-/* for anchor element or a tag */
-/* .btn:visited is another state */
-.btn:link, .btn:visited{
-text-transform: uppercase;
-text-decoration: none;
-padding: 15px 40px ;
-display: inline-block;
-border-radius: 100px;
-/* has to be on initial state */
-transition: all .2s;
-position: relative;
-
-}
-
-.btn-white{
-    background-color: #fff ;
-    color: #777 ;
-
-   animation-name:  moveInBottom;
-   animation-duration: 4s;
-}
-
-.btn:hover{
+.btn {
+  /* link is a pseudoclass, link is a state of btn */
+  /* for anchor element or a tag */
+  /* .btn:visited is another state */ }
+  .btn:link, .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    /* has to be on initial state */
+    transition: all .2s;
+    position: relative;
+    font-size: 1.6rem; }
+  .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2)
-}
-.btn:active{
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+    .btn:hover::after {
+      /* we want the element to grow and fade out */
+      transform: scaleX(1.4) scaleY(1.6);
+      /* it will fade out to invisible */
+      opacity: 0; }
+  .btn:active {
     transform: translateY(-1px);
     /* 10 px is for the thickness of blur */
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2)
-
-}
-
-.btn::after{
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  .btn::after {
     /* always necessary to have content and display */
     content: "";
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 100px;
+    border-radius: 10rem;
     /* it needs a reference , it will find the first relative element which is the btn */
     position: absolute;
     top: 0;
     left: 0;
-    z-index:-1;
+    z-index: -1;
     /* initial state */
-    transition: all .4s;
-}
-
-.btn-white::after{
-    background-color: #fff;
-}
-
-.btn:hover::after{
-    /* we want the element to grow and fade out */
-    transform: scaleX(1.4) scaleY(1.6);
-    /* it will fade out to invisible */
-    opacity: 0;
-}
-
-
-
-@keyframes moveInBottom{
-    0% {
-    opacity : 0;
-    /* to animate in the x direction */
-    /* - means goes to the left */
-    transform: translateY(30px)
-    }
-
-    100%{
-    opacity: 1;
-    /* looks like right now; the final state */
-    transform: translateY(0)
-    }
-}
-
-.btn-animated{
+    transition: all .4s; }
+  .btn--animated {
     /* 0.75 is animation delay */
     animation: moveInBottom .5s ease-out .75;
     /* automatically applied the 0 percent propery before the animation starts */
-    animation-fill-mode: backwards;
-    
-}
+    animation-fill-mode: backwards; }
+  .btn--white {
+    background-color: #fff;
+    color: #777;
+    animation-name: moveInBottom;
+    animation-duration: 4s; }
+    .btn--white::after {
+      background-color: #fff; }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    /* to animate in the x direction */
+    /* - means goes to the left */
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    /* looks like right now; the final state */
+    transform: translateY(0); } }
 
 /* end of header */
