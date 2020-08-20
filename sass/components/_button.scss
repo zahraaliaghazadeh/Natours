@@ -1,0 +1,76 @@
+   /* link is a pseudoclass, link is a state of btn */
+    /* for anchor element or a tag */
+    /* .btn:visited is another state */
+.btn{
+    &:link,
+    &:visited{
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem ;
+        display: inline-block;
+        border-radius: 10rem;
+        /* has to be on initial state */
+        transition: all .2s;
+        position: relative;
+        font-size: 1.6rem;
+        
+        }
+        
+        
+        &:hover{
+            transform: translateY(-3px);
+            box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+    
+            &::after{
+                /* we want the element to grow and fade out */
+                transform: scaleX(1.4) scaleY(1.6);
+                /* it will fade out to invisible */
+                opacity: 0;
+            }
+        }
+        &:active{
+            transform: translateY(-1px);
+            /* 10 px is for the thickness of blur */
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2)
+        
+        }
+        
+        &::after{
+            /* always necessary to have content and display */
+            content: "";
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            border-radius: 10rem;
+            /* it needs a reference , it will find the first relative element which is the btn */
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index:-1;
+            /* initial state */
+            transition: all .4s;
+        }
+        &--animated{
+            /* 0.75 is animation delay */
+            animation: moveInBottom .5s ease-out .75;
+            /* automatically applied the 0 percent propery before the animation starts */
+            animation-fill-mode: backwards;
+            
+        }
+    
+        &--white{
+            background-color: $color-white ;
+            color: $color-gray-dark ;
+        
+        //    animation-name:  moveInBottom;
+        //    animation-duration: 4s;
+    
+    
+           &::after{
+               background-color: $color-white;
+           }
+           
+        
+        }
+        
+    }

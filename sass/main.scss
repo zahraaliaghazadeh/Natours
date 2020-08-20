@@ -8,7 +8,21 @@ Dark green: #28b485
 */
 // made a partial file in base folder
 // now importing it
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
 @import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "layout/grid";
+@import "components/button";
+
+@import "pages/home";
+@import "layout/header";
+
 
 // npm run compile:sass
 
@@ -16,135 +30,136 @@ Dark green: #28b485
 // npm install live-server
 
 
-$color-primary:  #55c57a;
-$color-primary-light: #7ed56f;
-$color-primary-dark: #28b485;
+// $color-primary:  #55c57a;
+// $color-primary-light: #7ed56f;
+// $color-primary-dark: #28b485;
 
-$color-gray-dark: #777;
-$color-white: #fff;
-$color-black: #000;
-
-
-/* universal reset */
-*,
-*::after,
-*::before{
-    /* will reset browser default margins */
-    margin : 0;
-    padding: 0;
-    /* borders and paddings are not added to the height */
-    box-sizing: border-box;
-}
-
-/* to convert px to rem, 10 would be easy */
-html{
-    /* font-size:10px; */
-    /* rems are not supported on internet explorer below 9 */
-    /* 10 / 16 = 0.625 */
-    font-size: 62.5% ;
-}
-
-body{
-    font-family : "Lato" , sans-serif;
-    font-weight: 400;
-    /* font-size: 16px; */
-    line-height: 1.7;
-    color: #777;
-    padding : 3rem;
-}
-.header{
-    height: 95vh;
-
-    background-image: linear-gradient(to right bottom,
-    rgba($color-primary-light,0.8) ,
-     rgba($color-primary-dark,0.8)), url(../img/hero.jpg);
+// $color-gray-dark: #777;
+// $color-white: #fff;
+// $color-black: #000;
 
 
-    // background-image: linear-gradient(to right bottom,
-    //  #7ed56faf ,
-    //   #28b4858f), url(../img/hero.jpg);
-    /* it will fit the element inside of the box */
-    background-size: cover;
-    /* could also use center */
-    background-position: top;
-    /* to cut part of the picture */
-    /* x y , x y, x y */
-    /* clip-path: polygon(0 0 , 100% 0 , 100% 200px , 0 100% ) */
-    clip-path: polygon(0 0 , 100% 0 , 100% 75vh , 0 100% );
-    /* bennettfeely.com/clippy/ resource for polygon*/ 
-
-    position: relative;
-
-    &__logo-box{
-        position: absolute;
-        top: 4rem;
-        left: 4rem;
-    }
-
-    &__logo{
-        height: 3.5rem;
-    }
-    &__text-box{
-        position: absolute;
-        top: 40%;
-        left:50%;
-        transform: translate(-50%,50%);
-        text-align: center;
-    }
-}
-
-// .header__logo-box{
-//  position: absolute;
-//  top: 4rem;
-//  left: 4rem;
+// /* universal reset */
+// *,
+// *::after,
+// *::before{
+//     /* will reset browser default margins */
+//     margin : 0;
+//     padding: 0;
+//     /* borders and paddings are not added to the height */
+//     box-sizing: border-box;
 // }
 
-// .header__logo{
-//  height: 3.5rem;
+// /* to convert px to rem, 10 would be easy */
+// html{
+//     /* font-size:10px; */
+//     /* rems are not supported on internet explorer below 9 */
+//     /* 10 / 16 = 0.625 */
+//     font-size: 62.5% ;
 // }
 
-/* .logo:hover{
-    animation: moveInRight 3s ease-out;
-} */
+// body{
+//     font-family : "Lato" , sans-serif;
+//     font-weight: 400;
+//     /* font-size: 16px; */
+//     line-height: 1.7;
+//     color: #777;
+//     padding : 3rem;
+// }
 
-.heading-primary{
-color: $color-white;
-text-transform: uppercase;
-/* determines if backface is hidden or visible to user */
-/* this is to fix the shaky animation heading */
-backface-visibility: hidden;
+// .header{
+//     height: 95vh;
 
-margin-bottom: 6rem;
+//     background-image: linear-gradient(to right bottom,
+//     rgba($color-primary-light,0.8) ,
+//      rgba($color-primary-dark,0.8)), url(../img/hero.jpg);
 
-&--main{
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
+
+//     // background-image: linear-gradient(to right bottom,
+//     //  #7ed56faf ,
+//     //   #28b4858f), url(../img/hero.jpg);
+//     /* it will fit the element inside of the box */
+//     background-size: cover;
+//     /* could also use center */
+//     background-position: top;
+//     /* to cut part of the picture */
+//     /* x y , x y, x y */
+//     /* clip-path: polygon(0 0 , 100% 0 , 100% 200px , 0 100% ) */
+//     clip-path: polygon(0 0 , 100% 0 , 100% 75vh , 0 100% );
+//     /* bennettfeely.com/clippy/ resource for polygon*/ 
+
+//     position: relative;
+
+//     &__logo-box{
+//         position: absolute;
+//         top: 4rem;
+//         left: 4rem;
+//     }
+
+//     &__logo{
+//         height: 3.5rem;
+//     }
+//     &__text-box{
+//         position: absolute;
+//         top: 40%;
+//         left:50%;
+//         transform: translate(-50%,50%);
+//         text-align: center;
+//     }
+// }
+
+// // .header__logo-box{
+// //  position: absolute;
+// //  top: 4rem;
+// //  left: 4rem;
+// // }
+
+// // .header__logo{
+// //  height: 3.5rem;
+// // }
+
+// /* .logo:hover{
+//     animation: moveInRight 3s ease-out;
+// } */
+
+// .heading-primary{
+// color: $color-white;
+// text-transform: uppercase;
+// /* determines if backface is hidden or visible to user */
+// /* this is to fix the shaky animation heading */
+// backface-visibility: hidden;
+
+// margin-bottom: 6rem;
+
+// &--main{
+//     display: block;
+//     font-size: 6rem;
+//     font-weight: 400;
+//     letter-spacing: 3.5rem;
     
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    /* look at MDN for other timing functions */
-    /* slow and fast */
-    animation-timing-function: ease-out;
+//     animation-name: moveInLeft;
+//     animation-duration: 1s;
+//     /* look at MDN for other timing functions */
+//     /* slow and fast */
+//     animation-timing-function: ease-out;
     
-    /* animation-delay: 3s; */
-    /* animation-iteration-count: 3; */
+//     /* animation-delay: 3s; */
+//     /* animation-iteration-count: 3; */
     
-    }
+//     }
 
-    &--sub{
-        display: block;
-        font-size: 2rem;
-        font-weight: 400;
-        letter-spacing: 1.75rem;
-        animation-name: moveInRight;
-        animation-duration: 1s;
-        animation-timing-function: ease-out;
+//     &--sub{
+//         display: block;
+//         font-size: 2rem;
+//         font-weight: 400;
+//         letter-spacing: 1.75rem;
+//         animation-name: moveInRight;
+//         animation-duration: 1s;
+//         animation-timing-function: ease-out;
         
-        }
+//         }
 
-}
+// }
 
 // .heading-primary--main{
 // display: block;
@@ -174,136 +189,136 @@ margin-bottom: 6rem;
 
 // }
 
-.header__text-box{
-    position: absolute;
-    /* in relation to parent element */
-    top: 40%;
-    left: 50%;
-    /* background-color: red; */
+// .header__text-box{
+//     position: absolute;
+//     /* in relation to parent element */
+//     top: 40%;
+//     left: 50%;
+//     /* background-color: red; */
 
-    /* in relation to the element itself */
-    transform: translate(-50%,-50%);
-    text-align:center;
-}
+//     /* in relation to the element itself */
+//     transform: translate(-50%,-50%);
+//     text-align:center;
+// }
 
-/* opacity and transform can be used for animation */
-@keyframes moveInLeft{
-    0% {
-    opacity : 0;
-    /* to animate in the x direction */
-    /* - means goes to the left */
-    transform: translateX(-10rem)
-    }
-    80%{
-        transform: translateX(1rem)
+// /* opacity and transform can be used for animation */
+// @keyframes moveInLeft{
+//     0% {
+//     opacity : 0;
+//     /* to animate in the x direction */
+//     /* - means goes to the left */
+//     transform: translateX(-10rem)
+//     }
+//     80%{
+//         transform: translateX(1rem)
 
-    }
-    100%{
-    opacity: 1;
-    /* looks like right now; the final state */
-    transform: translate(0)
-    }
-}
+//     }
+//     100%{
+//     opacity: 1;
+//     /* looks like right now; the final state */
+//     transform: translate(0)
+//     }
+// }
 
 
-@keyframes moveInRight{
-    0% {
-    opacity : 0;
-    /* to animate in the x direction */
-    /* - means goes to the left */
-    /* can add this too ,rotate(-180deg) */
-    transform: translateX(10rem)
-    }
+// @keyframes moveInRight{
+//     0% {
+//     opacity : 0;
+//     /* to animate in the x direction */
+//     /* - means goes to the left */
+//     /* can add this too ,rotate(-180deg) */
+//     transform: translateX(10rem)
+//     }
   
-    80%{
-        transform: translateX(-1rem)
+//     80%{
+//         transform: translateX(-1rem)
 
-    }
-    100%{
-    opacity: 1;
-    /* looks like right now; the final state */
-    transform: translate(0)
-    }
-}
+//     }
+//     100%{
+//     opacity: 1;
+//     /* looks like right now; the final state */
+//     transform: translate(0)
+//     }
+// }
 
 
-.btn{
+// .btn{
 
-/* link is a pseudoclass, link is a state of btn */
-/* for anchor element or a tag */
-/* .btn:visited is another state */
-&:link,
-&:visited{
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem ;
-    display: inline-block;
-    border-radius: 10rem;
-    /* has to be on initial state */
-    transition: all .2s;
-    position: relative;
-    font-size: 1.6rem;
+// /* link is a pseudoclass, link is a state of btn */
+// /* for anchor element or a tag */
+// /* .btn:visited is another state */
+// &:link,
+// &:visited{
+//     text-transform: uppercase;
+//     text-decoration: none;
+//     padding: 1.5rem 4rem ;
+//     display: inline-block;
+//     border-radius: 10rem;
+//     /* has to be on initial state */
+//     transition: all .2s;
+//     position: relative;
+//     font-size: 1.6rem;
     
-    }
+//     }
     
     
-    &:hover{
-        transform: translateY(-3px);
-        box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+//     &:hover{
+//         transform: translateY(-3px);
+//         box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
 
-        &::after{
-            /* we want the element to grow and fade out */
-            transform: scaleX(1.4) scaleY(1.6);
-            /* it will fade out to invisible */
-            opacity: 0;
-        }
-    }
-    &:active{
-        transform: translateY(-1px);
-        /* 10 px is for the thickness of blur */
-        box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2)
+//         &::after{
+//             /* we want the element to grow and fade out */
+//             transform: scaleX(1.4) scaleY(1.6);
+//             /* it will fade out to invisible */
+//             opacity: 0;
+//         }
+//     }
+//     &:active{
+//         transform: translateY(-1px);
+//         /* 10 px is for the thickness of blur */
+//         box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2)
     
-    }
+//     }
     
-    &::after{
-        /* always necessary to have content and display */
-        content: "";
-        display: inline-block;
-        height: 100%;
-        width: 100%;
-        border-radius: 10rem;
-        /* it needs a reference , it will find the first relative element which is the btn */
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index:-1;
-        /* initial state */
-        transition: all .4s;
-    }
-    &--animated{
-        /* 0.75 is animation delay */
-        animation: moveInBottom .5s ease-out .75;
-        /* automatically applied the 0 percent propery before the animation starts */
-        animation-fill-mode: backwards;
+//     &::after{
+//         /* always necessary to have content and display */
+//         content: "";
+//         display: inline-block;
+//         height: 100%;
+//         width: 100%;
+//         border-radius: 10rem;
+//         /* it needs a reference , it will find the first relative element which is the btn */
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         z-index:-1;
+//         /* initial state */
+//         transition: all .4s;
+//     }
+//     &--animated{
+//         /* 0.75 is animation delay */
+//         animation: moveInBottom .5s ease-out .75;
+//         /* automatically applied the 0 percent propery before the animation starts */
+//         animation-fill-mode: backwards;
         
-    }
+//     }
 
-    &--white{
-        background-color: $color-white ;
-        color: $color-gray-dark ;
+//     &--white{
+//         background-color: $color-white ;
+//         color: $color-gray-dark ;
     
-       animation-name:  moveInBottom;
-       animation-duration: 4s;
+//        animation-name:  moveInBottom;
+//        animation-duration: 4s;
 
 
-       &::after{
-           background-color: $color-white;
-       }
+//        &::after{
+//            background-color: $color-white;
+//        }
        
     
-    }
+//     }
     
-}
+// }
 
 
 
@@ -373,20 +388,20 @@ margin-bottom: 6rem;
 
 
 
-@keyframes moveInBottom{
-    0% {
-    opacity : 0;
-    /* to animate in the x direction */
-    /* - means goes to the left */
-    transform: translateY(3rem)
-    }
+// @keyframes moveInBottom{
+//     0% {
+//     opacity : 0;
+//     /* to animate in the x direction */
+//     /* - means goes to the left */
+//     transform: translateY(3rem)
+//     }
 
-    100%{
-    opacity: 1;
-    /* looks like right now; the final state */
-    transform: translateY(0)
-    }
-}
+//     100%{
+//     opacity: 1;
+//     /* looks like right now; the final state */
+//     transform: translateY(0)
+//     }
+// }
 
 // .btn--animated{
 //     /* 0.75 is animation delay */
