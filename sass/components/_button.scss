@@ -73,4 +73,34 @@
         
         }
         
+}
+
+
+.btn-text{
+    &:link,
+    &:visited {
+        color: $color-primary;
+        display: inline-block;
+        text-decoration: none;
+        font-size: $default-font-size;
+        border-bottom: 1px solid $color-primary;
+            // for small pxs you can use px because the chances are user wont double from 16 px to double a 1 px 
+            // so it will be fine, since they are scalable
+        padding: 3px;
+        transition: all .2s;
+    }
+            &:hover{
+                
+                background-color: $color-primary;
+                color: $color-white;
+                box-shadow: 0 1rem 2rem rgba($color-black, .15);
+                transform: translateY(-2px);
+                
+        }
+            &:active{
+                box-shadow: 0 1rem 2rem rgba($color-black, .15);
+                transform: translateY(0);
+                
+
+        }
     }
