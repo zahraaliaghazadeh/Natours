@@ -72,6 +72,21 @@
            
         
         }
+
+        &--green{
+            background-color: $color-primary ;
+            color: $color-white ;
+        
+        //    animation-name:  moveInBottom;
+        //    animation-duration: 4s;
+    
+    
+           &::after{
+               background-color: $color-primary;
+           }
+           
+        
+        }
         
 }
 
