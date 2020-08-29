@@ -2,6 +2,8 @@
     background-color: $color-grey-dark-3;
     padding: 10rem 0;
     font-size: 1.4rem;
+    color: $color-grey-light-1;
+
 
     &__logo-box{
         text-align: center;
@@ -51,5 +53,13 @@
 
         }
 
+    }
+
+    &__copyright{
+        // color: $color-grey-light;
+        border-top: 1px solid $color-grey-dark;
+        padding-top: 2rem;
+        width: 80%;
+        float: right;
     }
 }
