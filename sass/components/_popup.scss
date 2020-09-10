@@ -7,6 +7,16 @@
     background-color: rgba($color-black, .8);
     z-index: 9999;
 
+    // display: none; //will not be able to animate it
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+
+    &:target{
+        opacity: 1;
+        visibility: visible;
+    }
+
     &__content{
         @include absCenter;
         width: 75%;
@@ -39,11 +49,19 @@
         font-size: 1.4rem;
         margin-bottom: 4rem;
 
+
+        // can use the property auto-prefixer in the future
         // a new way of making columns css automatically balances the height of the columns
+        -moz-column-count: 2;
+        -moz-column-gap: 4rem;
+        -moz-column-rule: 1px solid $color-grey-light-2;
         column-count: 2;
         column-gap: 4rem; //1em = 14px; 1 em is for the current size
         column-rule: 1px solid $color-grey-light-2;
-        
+
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        -webkit-hyphens: auto;
         // to automatocally decide where to place the hyphens
         hyphens: auto;
 
