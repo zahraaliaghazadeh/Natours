@@ -730,7 +730,6 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: orangered;
   z-index: 1500;
   opacity: 0;
   width: 0;
