@@ -1,4 +1,4 @@
-# [Natours]()
+# [Natours](https://zahraaliaghazadeh.github.io/Natours/index.html)
 >Exciting tours for adventurous people
 
 
@@ -38,7 +38,7 @@ To install:
 
 ## Usage 
 
-To use this application, you can [click here]().
+To use this application, you can [click here](https://zahraaliaghazadeh.github.io/Natours/index.html).
 
 Upon clicking on the link above, you can view the UI design of the app.
 
