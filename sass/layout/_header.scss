@@ -21,6 +21,11 @@
 
     position: relative;
 
+    @include respond(phone){   
+        -webikit-clip-path: 85vh;
+        clip-path: 85vh;
+    }
+
     &__logo-box{
         position: absolute;
         top: 4rem;
