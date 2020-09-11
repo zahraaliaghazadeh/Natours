@@ -6,6 +6,30 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+/*
+MEDIA QUERY MANAGER
+0-600px;     phone
+600-900px;   Tablet portrait
+900-1200px;  Tablet landscape
+[1200 -1800] is where our normal styles apply
+1800px+      Big desktop
+*/
+/*
+could add this to the element in html in base.scss but too much work
+@media (max-width:600px){
+    font-size: 50%;
+}
+@media (max-width: 900px){
+    font-size: 50%;
+}
+*/
+/*
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
 @keyframes moveInBottom {
   0% {
     opacity: 0;
@@ -60,6 +84,15 @@ html {
   /* rems are not supported on internet explorer below 9 */
   /* 10 / 16 = 0.625 */
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   /* borders and paddings are not added to the height */

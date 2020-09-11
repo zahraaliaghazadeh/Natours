@@ -18,7 +18,31 @@ html{
     /* rems are not supported on internet explorer below 9 */
     /* 10 / 16 = 0.625 */
     // 1rem = 10px defines what 1 rem is
-    font-size: 62.5% ;
+    font-size: 62.5% ;  // 1rem = 10px; 10px/16px = 62.5%
+
+    // first way
+    // @include respond-phone {
+    //     font-size: 50%;
+    // }
+
+    // second way:
+    
+    // @include respond(phone){
+    //     font-size: 50%;
+    // } // they are both 50 % so need one of them only
+
+    @include respond(tab-land){  //width <1200?
+        font-size: 56.25%;  // 1rem = 9px; 9px/16px = 56.25%
+    }
+    @include respond(tab-port){   //width <900?
+        font-size: 50%;  // 1rem = 8px; 8px/16px = 50%
+    }
+
+   
+    @include respond(big-desktop){
+        font-size: 75%;     // 1rem = 12px; 12px/16px = 75%
+    }
+
 }
 
 body{
@@ -32,3 +56,5 @@ body{
      /* borders and paddings are not added to the height */
     box-sizing: border-box;
 }
+
+
