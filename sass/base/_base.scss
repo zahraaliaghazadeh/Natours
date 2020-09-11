@@ -26,7 +26,7 @@ html{
     // }
 
     // second way:
-    
+
     // @include respond(phone){
     //     font-size: 50%;
     // } // they are both 50 % so need one of them only
@@ -55,6 +55,11 @@ body{
 
      /* borders and paddings are not added to the height */
     box-sizing: border-box;
+    padding: 3rem;
+
+    @include respond(tab-port){   
+        padding: 0;
+    }
 }
 
 
