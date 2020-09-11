@@ -117,10 +117,6 @@ body {
   /* this is to fix the shaky animation heading */
   backface-visibility: hidden;
   margin-bottom: 6rem; }
-  @media (max-width: 37.5em) {
-    .heading-primary {
-      letter-spacing: 1rem;
-      font-family: 5rem; } }
   .heading-primary--main {
     display: block;
     font-size: 6rem;
@@ -133,6 +129,10 @@ body {
     animation-timing-function: ease-out;
     /* animation-delay: 3s; */
     /* animation-iteration-count: 3; */ }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        letter-spacing: 1rem;
+        font-family: 5rem; } }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
@@ -141,6 +141,9 @@ body {
     animation-name: moveInRight;
     animation-duration: 1s;
     animation-timing-function: ease-out; }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: .5rem; } }
 
 .heading-secondary {
   font-size: 3.5rem;

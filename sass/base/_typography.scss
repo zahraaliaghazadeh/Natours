@@ -20,10 +20,7 @@ body{
     
     margin-bottom: 6rem;
 
-    @include respond (phone){
-        letter-spacing: 1rem;
-        font-family: 5rem;
-    }
+   
     
     &--main{
         display: block;
@@ -39,6 +36,11 @@ body{
         
         /* animation-delay: 3s; */
         /* animation-iteration-count: 3; */
+
+        @include respond (phone){
+            letter-spacing: 1rem;
+            font-family: 5rem;
+        }
         
         }
     
@@ -51,7 +53,15 @@ body{
             animation-duration: 1s;
             animation-timing-function: ease-out;
             
+
+            @include respond (phone){
+                letter-spacing: .5rem;
+                
             }
+
+            }
+
+
     
     }
 
@@ -73,7 +83,7 @@ body{
         font-size: 3rem;
     }
     @include respond (phone){
-         font-size: 2.5rem;
+        font-size: 2.5rem;
     }
    
 
