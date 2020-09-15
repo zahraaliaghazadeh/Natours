@@ -342,7 +342,7 @@ body {
         width: 33.33333333%;
         box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2); } }
     .composition__photo--p1 {
-      right: 0;
+      left: 0;
       top: -2rem; }
       @media only screen and (max-width: 56.25em) {
         .composition__photo--p1 {
@@ -543,8 +543,9 @@ body {
     float: left;
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
-    border-radius: 50%; }
-    @supports (clip-path: polygon(0, 0)) {
+    border-radius: 50%;
+    overflow: hidden; }
+    @supports (clip-path: polygon(0, 0)) or (-webkit-clip-path: polygon(0, 0)) {
       .story__shape {
         -webkit-clip-path: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
