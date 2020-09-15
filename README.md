@@ -61,6 +61,10 @@ images  [unsplash](https://www.unsplash.com)
 * For photo upload [cloudinary](https://cloudinary.com/)
 * For data manipulation/array methods [Lodash](https://lodash.com/)
 
+## npm packages used
+* concat
+* autoprefixer
+* postcss
 
 ## Features
 List of features:
