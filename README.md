@@ -62,9 +62,9 @@ images  [unsplash](https://www.unsplash.com)
 * For data manipulation/array methods [Lodash](https://lodash.com/)
 
 ## npm packages used
-* concat
-* autoprefixer
-* postcss
+* [concat](https://www.npmjs.com/package/concat)
+* [autoprefixer](https://www.npmjs.com/package/autoprefixer)
+* [postcss](https://www.npmjs.com/package/postcss)
 
 ## Features
 List of features:
