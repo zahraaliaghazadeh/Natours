@@ -101,7 +101,7 @@ Copyright © 2020 Zahra Ali Aghazadeh
 Feel free to contact me via linkedIn for any feedbacks, questions or collaborations! 
 
 
-<img src="./src/assets/images/Yalda1.png" width="80px"> <br>
+<img src="./assets/images/Yalda1.png" width="80px"> <br>
 Yalda Ali Aghazadeh : Project Manager / Front End Developer/ Designer
 [Github](https://github.com/zahraaliaghazadeh) ,
 [LinkedIn](https://www.linkedin.com/in/zahraaliaghazadeh/)
