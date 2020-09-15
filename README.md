@@ -19,12 +19,12 @@
 
 ## General Info
 
-> This application 's goal is to schedule tours and out door activities.
+> This application 's concept is to schedule tours and out door activities. This repository consist of mostly SCSS files for design and animations of the app.
 
 
 ## Screenshots
 
-
+<img src="./assets/images/screenshot1.png" width="250px" height="370px"> <img src="./assets/images/screenshot2.png" width="250px" height="370px"> <img src="./assets/images/screenshot3.png" width="250px" height="370px">
 
 
 
@@ -33,7 +33,7 @@
 To install:
 * [Visual Code](https://code.visualstudio.com/docs/setup/setup-overview)
 
-
+After downloading the files, use ```npm install``` command to install the packages.
 
 
 ## Usage 
@@ -42,7 +42,7 @@ To use this application, you can [click here](https://zahraaliaghazadeh.github.i
 
 Upon clicking on the link above, you can view the UI design of the app.
 
-![gif1](./public/assets/images/gif1.gif)
+![gif1](./assets/images/gif1.gif)
 
 
 
@@ -54,12 +54,8 @@ Source code from Udemy course by Jonas Schmedtmann
 video  [coverr](https://www.coverr.co)
 images  [unsplash](https://www.unsplash.com)
 
-#### npm packages used:
 
 
-#### Other Technologies used:
-* For photo upload [cloudinary](https://cloudinary.com/)
-* For data manipulation/array methods [Lodash](https://lodash.com/)
 
 ## npm packages used
 * [concat](https://www.npmjs.com/package/concat)
@@ -69,7 +65,11 @@ images  [unsplash](https://www.unsplash.com)
 ## Features
 List of features:
 * Feature 1: Easy to navigate design.
-* Feature 2: 
+* Feature 2: Incredibly organized file structure for layout, components, base, abstracts, etc.
+* Feature 3: very modern look and animations built with advanced CSS.
+* Feature 4: compiled code with npm packages to reduce its size.
+* Feature 5: fully responsive app, including the icon, font-size and images.
+
 
 
 
@@ -83,7 +83,7 @@ To-do list:
 
 
 ## Status
-Project is:  _in progress_
+Project is:  _finished_
 
 #### Inspiration
 Learning SASS (SCSS) , advanced CSS and HTML for better UI design.
