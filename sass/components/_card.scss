@@ -19,6 +19,7 @@
         top: 0;
         left: 0;
         width: 100%;
+        -webkit-backface-visibility: hidden;
         // will no longer see the back part
         backface-visibility: hidden;
         border-radius: 3px;

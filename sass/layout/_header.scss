@@ -19,7 +19,7 @@
     /* to cut part of the picture */
     /* x y , x y, x y */
     /* clip-path: polygon(0 0 , 100% 0 , 100% 200px , 0 100% ) */
-    clip-path: polygon(0 0 , 100% 0 , 100% 75vh , 0 100% );
+    // clip-path: polygon(0 0 , 100% 0 , 100% 75vh , 0 100% );
     /* bennettfeely.com/clippy/ resource for polygon*/ 
 
     position: relative;
@@ -27,7 +27,18 @@
     // first line and and then after camma is basically an or
     // 2000 is 125 em
     // 600 is 37.5
+
+// supporting clip path in safari
+@supports (clip-path:polygon(0,0) or (-webkit-clip-path:polygon(0,0))){
+    -webkit-clip-path: polygon(0 0 , 100% 0 , 100% 75vh , 0 100% );
+    clip-path: polygon(0 0 , 100% 0 , 100% 75vh , 0 100% );
+    height: 95vh;
+
+}
+
+
     @media(min-resolution: 192dpi) and (min-width: 37.5em),
+    (-webkit-min-device-pixel-ratio:2) and (min-width: 37.5em),
     (min-width: 125em){
         background-image: linear-gradient(to right bottom,
         rgba($color-primary-light,0.8) ,
