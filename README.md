@@ -102,7 +102,7 @@ Feel free to contact me via linkedIn for any feedbacks, questions or collaborati
 
 
 <img src="./assets/images/Yalda1.png" width="80px"> <br>
-Yalda Ali Aghazadeh : Project Manager / Front End Developer/ Designer
+Yalda Ali Aghazadeh
 [Github](https://github.com/zahraaliaghazadeh) ,
 [LinkedIn](https://www.linkedin.com/in/zahraaliaghazadeh/)
 
